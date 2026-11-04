@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoreTeam.LLC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <div class="lang-modal" id="langModal">
+        <div class="lang-modal-content">
+            <div class="lang-modal-eyebrow">CoreTeam.LLC</div>
+            <h2>Choose your language<br><span>Выберите ваш язык</span></h2>
+            <div class="lang-modal-list">
+                <button class="lang-modal-btn" data-lang="en">English</button>
+                <button class="lang-modal-btn" data-lang="ru">Русский</button>
+            </div>
+        </div>
+    </div>
+
+    <aside class="sidebar">
+        <a href="#" class="logo">Core<span class="inc">Team</span></a>
+        <ul class="side-nav">
+            <li><a data-view="home" class="active"><span class="idx">01</span><span data-i18n="nav.home">Home</span></a></li>
+            <li><a data-view="projects"><span class="idx">02</span><span data-i18n="nav.projects">Projects</span></a></li>
+            <li><a data-view="playlist"><span class="idx">03</span><span data-i18n="nav.playlist">Playlist</span></a></li>
+            <li><a data-view="donate"><span class="idx">04</span><span data-i18n="donate.nav">Donate</span></a></li>
+        </ul>
+        <div class="sidebar-footer">
+            <div class="status"><span class="status-dot"></span><span data-i18n="sidebar.system">System</span></div>
+            <div class="copy" data-i18n="sidebar.copyright">© 2026 CoreTeam.LLC</div>
+        </div>
+    </aside>
+
+    <div class="lang-globe-wrapper">
+        <button class="lang-globe-btn" id="globeBtn" title="Change language">
+            <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95c-.32-1.25-.78-2.45-1.38-3.56 1.84.63 3.37 1.91 4.33 3.56zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56-1.84-.63-3.37-1.9-4.33-3.56zm2.95-8H5.08c.96-1.66 2.49-2.93 4.33-3.56C8.81 5.55 8.35 6.75 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2 0-.68.07-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95c-.96 1.65-2.49 2.93-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"/></svg>
+        </button>
+        <div class="lang-dropdown" id="langDropdown">
+            <button class="lang-dropdown-item" data-lang="en">English</button>
+            <button class="lang-dropdown-item" data-lang="ru">Русский</button>
+        </div>
+    </div>
+
+    <main class="main">
+        <div class="view active" id="view-home">
+            <section class="hero">
+                <div class="hero-eyebrow">CoreTeam.LLC</div>
+                <h1 data-i18n="home.title">We create games and digital projects you want to return to</h1>
+                <p data-i18n="home.desc1">CoreTeam.LLC is a young company. We create full-cycle games and digital projects: design, development, sound.</p>
+                <p data-i18n="home.desc2">Our goal is to make products you want to return to.</p>
+            </section>
+        </div>
+
+        <div class="view" id="view-projects">
+            <section class="block">
+                <h2 data-i18n="projects.title">Projects</h2>
+                <div class="projects-grid" id="projectsGrid">
+                    <div class="empty-state" data-i18n="projects.loading">Loading...</div>
+                </div>
+            </section>
+        </div>
+
+        <div class="view" id="view-project-page">
+            <div class="project-page" id="projectPage"></div>
+        </div>
+
+        <div class="view" id="view-playlist">
+            <section class="playlist-view-head">
+                <div class="hero-eyebrow" data-i18n="playlist.eyebrow">Media Library</div>
+                <h1 data-i18n="playlist.title">Playlist</h1>
+                <p data-i18n="playlist.desc">Pick a track — the music keeps playing even when you switch tabs.</p>
+            </section>
+            <section class="playlist-block">
+                <div class="track-list" id="trackList">
+                    <div class="empty-state" data-i18n="playlist.loading">Loading...</div>
+                </div>
+            </section>
+        </div>
+
+        <div class="view" id="view-donate">
+            <section class="donate-wrapper">
+                <a class="donate-btn" href="https://www.donationalerts.com/r/boofy09" target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                    <span data-i18n="donate.button">Donate</span>
+                </a>
+                <div class="donate-art">
+                    <img src="" alt="CoreTeam" id="donateArt" style="display: none;">
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div class="mini-player" id="miniPlayer">
+        <div class="mini-progress" id="miniProgress">
+            <div class="mini-progress-fill" id="miniProgressFill"></div>
+        </div>
+        <div class="mini-left" id="miniLeft">
+            <div class="mini-cover" id="miniCover">
+                <svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+            </div>
+            <div class="mini-info">
+                <div class="mini-title" id="miniTitle">—</div>
+                <div class="mini-author" id="miniAuthor">—</div>
+            </div>
+        </div>
+        <div class="mini-center">
+            <div class="mini-controls">
+                <button class="mini-btn" id="miniPrev"><svg viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg></button>
+                <button class="mini-play" id="miniPlay"><svg id="miniPlayIcon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
+                <button class="mini-btn" id="miniNext"><svg viewBox="0 0 24 24"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg></button>
+            </div>
+            <div class="mini-progress-wrap">
+                <span class="mini-time" id="miniCur">0:00</span>
+                <span class="mini-time" id="miniTotal">0:00</span>
+            </div>
+        </div>
+        <div class="mini-right">
+            <div class="mini-volume">
+                <svg id="miniMuteBtn" viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>
+                <div class="mini-volume-bar" id="miniVolumeBar"><div class="mini-volume-fill" id="miniVolumeFill"></div></div>
+            </div>
+            <button class="mini-expand" id="miniExpand" title="Expand">
+                <svg viewBox="0 0 24 24"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>
+            </button>
+            <button class="mini-hide" id="miniHideBtn" title="Hide player">
+                <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+            </button>
+        </div>
+    </div>
+
+    <div class="mini-restore" id="miniRestore" title="Show player">
+        <svg viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6 1.41 1.41z"/></svg>
+        <span>Player</span>
+    </div>
+
+    <div class="full-player" id="fullPlayer">
+        <div class="full-top">
+            <button class="full-collapse" id="fullCollapse">
+                <svg viewBox="0 0 24 24"><path d="M12 4l-8 8h6v8h4v-8h6z"/></svg>
+                <span data-i18n="player.collapse">Collapse</span>
+            </button>
+            <span class="full-label">CoreTeam · Music</span>
+            <div style="width: 120px;"></div>
+        </div>
+        <div class="full-body">
+            <div class="full-cover" id="fullCover">
+                <svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+            </div>
+            <div class="full-title" id="fullTitle">—</div>
+            <div class="full-author" id="fullAuthor">—</div>
+            <div class="error-message" id="errorMsg"></div>
+            <div class="full-progress-wrap">
+                <div class="full-progress" id="fullProgress"><div class="full-progress-fill" id="fullProgressFill"></div></div>
+                <div class="full-times"><span id="fullCur">0:00</span><span id="fullTotal">0:00</span></div>
+            </div>
+            <div class="full-controls">
+                <button class="full-btn" id="fullShuffle" title="Shuffle">
+                    <svg viewBox="0 0 24 24"><path d="M10.59 9.17L5.41 4 4 5.41l5.17 5.17 1.42-1.41zM14.5 4l2.04 2.04L4 18.59 5.41 20 17.96 7.46 20 9.5V4h-5.5zm.33 9.41l-1.41 1.41 3.13 3.13L14.5 20H20v-5.5l-2.04 2.04-3.13-3.13z"/></svg>
+                </button>
+                <button class="full-btn" id="fullPrev"><svg viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg></button>
+                <button class="full-play" id="fullPlay"><svg id="fullPlayIcon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
+                <button class="full-btn" id="fullNext"><svg viewBox="0 0 24 24"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg></button>
+                <button class="full-btn" id="fullRepeat" title="Repeat">
+                    <svg viewBox="0 0 24 24"><path d="M7 7h10v3l4-4-4-4v3H5v6h2V7zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2v4z"/></svg>
+                </button>
+            </div>
+            <div class="full-volume">
+                <svg id="fullMuteBtn" viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>
+                <div class="full-volume-bar" id="fullVolumeBar"><div class="full-volume-fill" id="fullVolumeFill"></div></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="yt-player"></div>
+
+    <script src="./js/i18n.js"></script>
+    <script src="./js/player.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+</html>
