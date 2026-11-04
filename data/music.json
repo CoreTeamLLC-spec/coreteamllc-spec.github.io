@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Encounter",
+    "author": "Mick",
+    "url": "./audio/encounter.mp3",
+    "cover": "./images/covers/encounter.png"
+  },
+  {
+    "title": "Conference",
+    "author": "ToeZard",
+    "url": "./audio/conference.mp3",
+    "cover": "./images/covers/conference.png"
+  },
+  {
+    "title": "Game Over",
+    "author": "Kapo4kaGeniy",
+    "url": "./audio/gameover.mp3",
+    "cover": "./images/covers/gameover.png"
+  }
+]
