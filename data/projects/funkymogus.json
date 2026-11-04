@@ -1,0 +1,28 @@
+{
+  "id": "funkymogus",
+  "title": "FunkyMogus",
+  "description": "фнф - мод по AmongUs.",
+  "fullDescription": "БФ попадает в игру AmongUs, вам придётся доказать свою невиновность с помощью РЭП-БИТВЫ.",
+  "version": "1.0.0",
+  "size": "~91 MB",
+  "updated": "2026-10-28",
+  "developer": "CoreTeam.LLC",
+  "category": "Игра",
+  "cover": "./images/projects/funkymogus/cover.jpg",
+  "icon": {
+    "16": "./images/projects/funkymogus/icon16.png",
+    "32": "./images/projects/funkymogus/icon32.png",
+    "48": "./images/projects/funkymogus/icon48.png",
+    "128": "./images/projects/funkymogus/icon128.png",
+    "256": "./images/projects/funkymogus/icon256.png"
+  },
+  "screenshots": [
+    "./images/projects/funkymogus/screenshot-1.png",
+    "./images/projects/funkymogus/screenshot-2.png",
+    "./images/projects/funkymogus/screenshot-3.png"
+  ],
+  "links": [
+    { "label": "FM - Vs Impostor Port", "url": "https://gamebanana.com/dl/1732536", "type": "download" },
+    { "label": "FM - V slice Port", "url": "https://gamebanana.com/dl/1724594", "type": "download" }
+  ]
+}
