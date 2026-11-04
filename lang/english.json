@@ -1,0 +1,61 @@
+{
+    "nav": {
+        "home": "Home",
+        "projects": "Projects",
+        "playlist": "Playlist"
+    },
+    "sidebar": {
+        "system": "System",
+        "copyright": "© 2026 CoreTeam.LLC"
+    },
+    "home": {
+        "title": "We create games and digital projects you want to return to",
+        "desc1": "CoreTeam.LLC is a young company. We create full-cycle games and digital projects: design, development, sound.",
+        "desc2": "Our goal is to make products you want to return to."
+    },
+    "projects": {
+        "title": "Projects",
+        "loading": "Loading...",
+        "empty": "No projects yet.",
+        "back": "Back to projects",
+        "description": "Description",
+        "screenshots": "Screenshots",
+        "download": "Download",
+        "updated": "Updated"
+    },
+    "playlist": {
+        "eyebrow": "Media Library",
+        "title": "Playlist",
+        "desc": "Pick a track — the music keeps playing even when you switch tabs.",
+        "loading": "Loading...",
+        "empty": "No tracks."
+    },
+    "player": {
+        "nowPlaying": "Now playing",
+        "collapse": "Collapse",
+        "showPlayer": "Player",
+        "hidePlayer": "Hide player",
+        "expand": "Expand",
+        "noCover": "No cover",
+        "repeatOff": "Repeat off",
+        "repeatAll": "Repeat playlist",
+        "repeatOne": "Repeat track",
+        "playError": "Error: audio file not found or blocked.",
+        "ytLoading": "YouTube player is still loading. Please wait...",
+        "fileError": "Failed to load file. Check the link."
+    },
+    "errors": {
+        "musicNotFound": "File data/music.json not found",
+        "projectsNotFound": "File data/projects/index.json not found",
+        "projectNotFound": "Not found"
+    },
+    "lang": {
+        "label": "Language",
+        "ru": "Русский",
+        "en": "English"
+    },
+    "donate": {
+        "nav": "Donate",
+        "button": "Donate"
+    }
+}
